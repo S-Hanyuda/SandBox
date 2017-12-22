@@ -16,3 +16,5 @@ int main() {
   }
   printf("S=%f", 8 * (double)in / NUM);
 }
+//git test
+//git dev
