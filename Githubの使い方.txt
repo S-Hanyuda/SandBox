@@ -32,3 +32,4 @@ nano [file]：Mac搭載エディタ。クソ便利
 
 ○参考
 https://gist.github.com/satoshin2071/4b9a66e0a7ec18a6fa21
+
