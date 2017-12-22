@@ -1,0 +1,40 @@
+The way of how to use Github
+個人用
+
+○用語
+・branch：Gitで管理されるファイルが入る領域のようなもの。
+　フォルダに入っている訳ではなく、ブランチ名にファイルの状態が紐付けされてるイメージ。
+・ステージング：addでbranchにファイルを追加する/されていること。
+
+○コマンド
+//git
+・git init：Gitの使用開始。現在のcdがmasterブランチとして使われるのであらかじめ変更すること。
+・git status：フォルダ内の現在の状態が見られる。どのファイルがaddされているかなどの確認に。
+・git add <file>：ファイルを現在のbranchに追加する際に行う。
+　これが行われていないファイルはGitの管理下にないため注意が必要。
+・git rm <file>：フォルダ内のファイルを削除する。
+　　git rm --cached <file>：branchの管理対象からファイルを削除する。
+・git clean：addで追加されていないファイルを削除する。
+　#消したファイルは復活させられないので注意！
+　　git clean -n：予行演習。実際に削除はされない。
+・git commit -m "message"：メッセージ付きでbranchの変更点を保存する。
+・git log：コミットのログが見られる。
+・git branch <name>：指定した名前のブランチを作成する。
+・git checkout <branch>：指定したブランチに移動する。
+　これにより、実在するファイルがそのブランチの状態に合わせて変更される。
+・git merge <branch>：指定したブランチの内容を現在のブランチに反映させる。
+・git reset [option]：ステージングを1つ前のコミットの状態にする。
+　　git reset --hard HEAD^：1つ前のコミットに戻る。
+　　git reset --soft HEAD^：1つ前のコミットを消す。
+・git remote add <name> <url>：指定したURLのリポジトリをnameで使えるようにする
+・git remote -v：使えるリポジトリの確認
+・git push -u <name> <branch>：ブランチをGithubリポジトリに送る
+
+//Mac
+emacs [file]：みんな知ってるエディタ。わりと便利
+nano [file]：Mac搭載エディタ。クソ便利
+Vim：bash搭載エディタ。クソ
+
+○参考
+https://gist.github.com/satoshin2071/4b9a66e0a7ec18a6fa21
+
