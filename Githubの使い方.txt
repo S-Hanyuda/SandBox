@@ -5,8 +5,6 @@ The way of how to use Github
 ・branch：Gitで管理されるファイルが入る領域のようなもの。
 　フォルダに入っている訳ではなく、ブランチ名にファイルの状態が紐付けされてるイメージ。
 ・ステージング：addでbranchにファイルを追加する/されていること。
-・PullRequest：自分の前に誰かがプロジェクトなどを変更してた場合、これを行う必要がある。
-　していないとファイルの整合性が取れておらず怒られる。commitすらできない。
 
 ○コマンド
 //git
@@ -32,6 +30,7 @@ The way of how to use Github
 　　git reset --soft HEAD^：1つ前のコミットを消す。
 ・git remote add <name> <url>：指定したURLのリポジトリをnameで使えるようにする。
 ・git remote -v：使えるリポジトリの確認。
+・git remote rename <old-name> <new-name>：リポジトリ名変更
 ・git push -u <name> <branch>：ブランチをGithubリポジトリに送る。
 ・git clone <url>：URLのリポジトリをダウンロードする。PullRequestなどに必要
 
@@ -40,6 +39,13 @@ emacs [file]：みんな知ってるエディタ。わりと便利
 nano [file]：Mac搭載エディタ。クソ便利
 Vim：bash搭載エディタ。クソ
 
-○参考
-https://gist.github.com/satoshin2071/4b9a66e0a7ec18a6fa21
+○ssh関連
+秘密鍵の設定などは割愛
+ssh用リポジトリの設定法
+・git remote add <name> <url>
+・git remote set-url <name> <ssh-link>
 
+○参考
+reset,revertの扱い1：https://gist.github.com/satoshin2071/4b9a66e0a7ec18a6fa21
+reset,revertの扱い2：https://qiita.com/shuntaro_tamura/items/06281261d893acf049ed
+sshで接続：https://yoshiyoshifujii.hatenablog.com/entry/2014/08/12/230144
