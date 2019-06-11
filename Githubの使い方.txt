@@ -16,6 +16,7 @@ The way of how to use Github
 　これが行われていないファイルはGitの管理下にないため注意が必要。
 ・git rm <file>：フォルダ内のファイルを削除する。
 　　git rm --cached <file>：branchの管理対象からファイルを削除する。
+   git rm --ignore-unmatch <file>：addされていないファイルを無視して削除する。
 ・git clean：addで追加されていないファイルを削除する。
 　#消したファイルは復活させられないので注意！
 　　git clean -n：予行演習。実際に削除はされない。
@@ -32,8 +33,11 @@ The way of how to use Github
 　　git reset --soft HEAD^：1つ前のコミットを消す。
 ・git remote add <name> <url>：指定したURLのリポジトリをnameで使えるようにする。
 ・git remote -v：使えるリポジトリの確認。
-・git remote rename <old-name> <new-name>：リポジトリ名変更
-・git push -u <name> <branch>：ブランチをGithubリポジトリに送る。
+・git remote rename <old-repos-name> <new-repos-name>：リポジトリ名変更
+・git push -u <repos-name> <branch>：ブランチをGithubリポジトリに送る。
+・git pull <repos-name> master：Githubリポジトリからブランチに持ってくる。
+・git fetch：リモートからローカルに最新の情報を持ってくる。ファイルは更新されない。
+・git rebase <repos-name>：リモートの変更を反映した後にローカルの変更を反映する感じ。
 ・git clone <url>：URLのリポジトリをダウンロードする。PullRequestなどに必要
 
 //Mac
